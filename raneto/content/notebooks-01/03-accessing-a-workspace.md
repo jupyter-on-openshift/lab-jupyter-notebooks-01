@@ -17,6 +17,6 @@ Open the hostname from a new browser window. You should be presented with a form
 
 ![Password Entry](jupyternotebooklogin.png)
 
-Having logged in, you will then be presented with the Jupyter Notebook file browser, and can't start using the workspace.
+Having logged in, you will then be presented with the Jupyter Notebook file browser, and can start using the workspace.
 
 ![File Browser](jupyternotebookbrowser.png)
