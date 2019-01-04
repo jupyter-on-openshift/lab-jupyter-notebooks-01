@@ -1,7 +1,7 @@
 ---
 Title: Creating a Workspace
 PrevPage: 01-images-and-templates
-NextPage: 03-access-the-workspace
+NextPage: 03-accessing-a-workspace
 ---
 
 Now that you have the images and templates for deploying a Jupyter Notebook loaded, you can create the Jupyter Notebook workspace by running the command:
@@ -43,12 +43,6 @@ Once the template has been processed and the deployment created, you should see 
     Run 'oc status' to view your app.
 ```
 
-To monitor progress of the deployment, and know when it has completed, run the command:
-
-```execute
-oc rollout status deploymentconfig experiments
-```
-
 The template creates a set of resources for the deployment.
 
 These include a persistent volume for storing data for your Jupyter Notebook workspace, and a route, which exposes the Jupyter Notebook workspace via a URL so you can access it. When you connect to the Jupyter Notebook workspace, a secure connection will be used and you will need to login using the password you supplied.
@@ -56,3 +50,13 @@ These include a persistent volume for storing data for your Jupyter Notebook wor
 For this workspace, the name `experiments` was passed to the `APPLICATION_NAME` template parameter. If you do not supply this template parameter, it will default to using the name `custom-notebook`. This name is used in the resources created, and the URL you use to access the Jupyter Notebook workspace.
 
 If you were to create multiple Jupyter Notebook workspaces in the one project, you should give them unique names using the `APPLICATION_NAME` template parameter.
+
+To monitor progress of the deployment, run the command:
+
+```execute
+oc rollout status deploymentconfig experiments
+```
+
+The command will exit once the deployment has completed and the Jupyter Notebook workspace is ready to use.
+
+Note that if it is the first deployment of a Jupyter Notebook to an OpenShift cluster, startup may be delayed. This is due to the Jupyter Notebook image needing to be pulled down to the cluster.
