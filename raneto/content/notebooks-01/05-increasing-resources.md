@@ -58,3 +58,5 @@ You can view what resource quota you are subject to, by running:
 ```execute
 oc describe resourcequotas
 ```
+
+The output from this command will be empty if you are not subject to any resource quotas.
