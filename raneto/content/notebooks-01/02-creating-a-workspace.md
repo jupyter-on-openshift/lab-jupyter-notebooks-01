@@ -57,6 +57,6 @@ To monitor progress of the deployment, run the command:
 oc rollout status deploymentconfig experiments
 ```
 
-The command will exit once the deployment has completed and the Jupyter Notebook workspace is ready to use.
+The initial deployment can take some time as the Jupyter Notebook image may need to be pulled down to the cluster. Also, the persistent volume will need to be populated, by copying the contents of the workspace from the image to the persistent volume. Depending on the class of persistent storage used by the cluster, how long this will take can vary. A subsequent restart of the Jupyter Notebook instance will be quicker, as the copying of contents only needs to be done once.
 
-Note that if it is the first deployment of a Jupyter Notebook to an OpenShift cluster, startup may be delayed. This is due to the Jupyter Notebook image needing to be pulled down to the cluster.
+Once the deployment has completed, the `oc rollout status` command will exit, and the Jupyter Notebook workspace will be ready to use.
