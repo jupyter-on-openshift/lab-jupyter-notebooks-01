@@ -1,8 +1,7 @@
 ---
 Title: Accessing a Workspace
 PrevPage: 02-creating-a-workspace
-NextPage: ../finish
-ExitSign: Finish Workshop
+NextPage: 04-jupyterlab-web-design
 ---
 
 Once the deployment has completed, you can see details of the public route created, including what public hostname the Jupyter Notebook instance was given, by running:
