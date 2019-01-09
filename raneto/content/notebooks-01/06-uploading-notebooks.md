@@ -28,7 +28,7 @@ This should display output similar to:
 
 ```
 NAME                  READY     STATUS    RESTARTS   AGE
-experiments-1-6648q   1/1       Running   0          15m
+experiments-3-6648q   1/1       Running   0          15m
 ```
 
 There would normally only be a single pod shown. If there is more than one, the one you want is that with "Running" status.
