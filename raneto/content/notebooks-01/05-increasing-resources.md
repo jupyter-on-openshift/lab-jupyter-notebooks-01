@@ -5,7 +5,7 @@ NextPage: ../finish
 ExitSign: Finish Workshop
 ---
 
-When deploying the Jupyter Notebook workspace using the template, by default, 512Mi will be allocated for memory to the pod created.
+When deploying the Jupyter Notebook workspace using the template, 512Mi of memory will be allocated to the container created.
 
 If you are working with large data sets, or wish to be able to open many Jupyter notebook files at the same time, you may need to increase the amount of memory allocated.
 
@@ -27,7 +27,7 @@ Containers:
      memory:   512Mi
 ```
 
-Alternatively, to get just the value of the limit, run:
+Alternatively, to display just the value of the limit, run:
 
 ```execute
 oc get deploymentconfig experiments -o template --template '{{(index .spec.template.spec.containers 0).resources.limits.memory}}{{"\n"}}'
@@ -36,7 +36,7 @@ oc get deploymentconfig experiments -o template --template '{{(index .spec.templ
 To increase the memory allocated, you can use the `oc set resources` command. To increase the memory limit to 768Mi, run:
 
 ```execute
-oc set resources deploymentconfig experiments --limits memory=768Mi
+oc set resources deploymentconfig experiments --containers notebook --limits memory=768Mi
 ```
 
 To verify the change, run again the command:
@@ -45,6 +45,8 @@ To verify the change, run again the command:
 oc get deploymentconfig experiments -o template --template '{{(index .spec.template.spec.containers 0).resources.limits.memory}}{{"\n"}}'
 ```
 
+If you know in advance of creating a Jupyter Notebook workspace that you will need additional memory, you can set the memory by passing the `NOTEBOOK_MEMORY` template parameter to the `notebook-workspace` template.
+ 
 Note that if your project is subject to resource limit ranges and/or resource quotas, you will only be able to increase the amount of memory allocated up to maximum allowed under the limit range. Although the limit range may allow you set a value, you still also need to have an adequate memory allowance remaining, not in use, under any resource quota. If you have insufficient memory remaining under your resource quota, the deployment will not succeed.
 
 You can view what the resource limit ranges are, if set for a project, by running:
@@ -59,4 +61,4 @@ You can view what resource quota you are subject to, by running:
 oc describe resourcequotas
 ```
 
-The output from this command will be empty if you are not subject to any resource quotas.
+The output from theses command will be empty if you are not subject to any resource limit ranges or quotas.

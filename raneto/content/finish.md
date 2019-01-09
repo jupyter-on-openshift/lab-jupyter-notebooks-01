@@ -3,9 +3,9 @@ Sort: 4
 Title: Workshop Summary
 ---
 
-You have completed the workshop. Resourcess linked to in the workshop you may like to record for future reference are listed below.
+You have completed the workshop. Resources referred to, or used in the workshop which you may like to record for future reference are listed below.
 
-The Jupyter on OpenShift project Git respositories can be found on GitHub at:
+The Jupyter on OpenShift project Git repositories can be found on GitHub at:
 
 * https://github.com/jupyter-on-openshift
 

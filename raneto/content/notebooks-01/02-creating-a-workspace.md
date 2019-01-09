@@ -13,7 +13,7 @@ read -p "Enter Password: " NOTEBOOK_PASSWORD && \
   --param NOTEBOOK_PASSWORD=$NOTEBOOK_PASSWORD
 ```
 
-This command is setup to prompt you for a password to secure access to the Jupyter Notebook workspace. Enter the password you would like to use.
+This command will prompt you for a password to secure access to the Jupyter Notebook workspace. Enter the password you would like to use.
 
 Once the template has been processed and the deployment created, you should see output similar to:
 
@@ -43,9 +43,7 @@ Once the template has been processed and the deployment created, you should see 
     Run 'oc status' to view your app.
 ```
 
-The template creates a set of resources for the deployment.
-
-These include a persistent volume for storing data for your Jupyter Notebook workspace, and a route, which exposes the Jupyter Notebook workspace via a URL so you can access it. When you connect to the Jupyter Notebook workspace, a secure connection will be used and you will need to login using the password you supplied.
+The template creates a set of resources for the deployment. These include a persistent volume for storing data for your Jupyter Notebook workspace, and a route, which exposes the Jupyter Notebook workspace via a URL so you can access it. When you connect to the Jupyter Notebook workspace, a secure connection will be used and you will need to login using the password you supplied.
 
 For this workspace, the name `experiments` was passed to the `APPLICATION_NAME` template parameter. If you do not supply this template parameter, it will default to using the name `custom-notebook`. This name is used in the resources created, and the URL you use to access the Jupyter Notebook workspace.
 
@@ -57,6 +55,6 @@ To monitor progress of the deployment, run the command:
 oc rollout status deploymentconfig experiments
 ```
 
-The initial deployment can take some time as the Jupyter Notebook image may need to be pulled down to the cluster. Also, the persistent volume will need to be populated, by copying the contents of the workspace from the image to the persistent volume. Depending on the class of persistent storage used by the cluster, how long this will take can vary. A subsequent restart of the Jupyter Notebook instance will be quicker, as the copying of contents only needs to be done once.
+The initial deployment when using the `notebook-workspace` template can take some time. This is because the persistent volume will need to be populated, by copying the contents of the workspace from the image to the persistent volume. Depending on the class of persistent storage used by the cluster, how long this will take can vary. A subsequent restart of the Jupyter Notebook instance will be quicker, as the copying of contents only needs to be done once.
 
 Once the deployment has completed, the `oc rollout status` command will exit, and the Jupyter Notebook workspace will be ready to use.

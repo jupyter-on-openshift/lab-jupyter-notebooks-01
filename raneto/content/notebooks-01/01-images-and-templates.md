@@ -59,4 +59,16 @@ This will load the following templates:
 
 * `notebook-workspace` - Template for deploying a Jupyter Notebook instance which also attaches a persistent volume, and copies any Python packages and notebooks included in the image, into the persistent volume. Any work done on the notebooks, or to install additional Python packages, will survive a restart of the Jupyter Notebook environment. A webdav interface is also enabled to allow remote mounting of the persistent volume to a local computer.
 
+You can see the list of templates loaded by running:
+
+```execute
+oc get templates
+```
+
 In the initial exercise you will be using the `notebook-workspace` template.
+
+To see details about this template and what parameters can be provided when using the template, run the command:
+
+```execute
+oc describe template notebook-workspace
+```

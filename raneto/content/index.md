@@ -5,7 +5,9 @@ NextPage: modules
 ExitSign: Modules Available
 ---
 
-The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
+The [Project Jupyter](https://jupyter.org/) site describes Jupyter Notebooks as:
+
+> an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
 
 ![Jupyter Notebooks](jupyterpreview.png)
 
