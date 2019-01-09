@@ -24,6 +24,6 @@ Enter your password, and you should see the JupyterLab web interface design.
 
 ![JupyterLab Interface](jupyterlabwebdesign.png)
 
-It is necessary use a new browser window with the original URL, because even when the JupyterLab web interface is enabled, the classic web interface is still supported at the original sub URL the browser would have been on. It is thus necessary to start over, so you are redirected to the sub URL for the JupyterLab web interface.
+It is necessary to use a new browser window with the original URL, because even when the JupyterLab web interface is enabled, the classic web interface is still supported at the original sub URL the browser would have been on. It is thus necessary to start over, so you are redirected to the sub URL for the JupyterLab web interface.
 
 If you prefer to always have the JupyterLab web interface design, instead of overriding the environment variable in the deployment configuration each time, you can instead edit and change the templates to make it the default. This way it will always be used when creating new Jupyter Notebook workspaces.

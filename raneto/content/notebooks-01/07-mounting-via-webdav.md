@@ -22,7 +22,9 @@ oc get route experiments-webdav
 
 The URL for access to the WebDAV server for the instance of the Jupyter Notebook workspace you created is:
 
+```copy
 https://experiments-webdav-%project_namespace%.%cluster_subdomain%/webdav/
+```
 
 When connecting to the WebDAV server, the login name will be `jupyter` and the password will be the same password you used to secure access to the Jupyter Notebook web space through the browser. You must use the `/webdav/` path in the URL or setup of the WebDAV connection.
 
