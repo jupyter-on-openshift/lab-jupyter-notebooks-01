@@ -1,8 +1,7 @@
 ---
 Title: Increasing Resources
 PrevPage: 04-jupyterlab-web-design
-NextPage: ../finish
-ExitSign: Finish Workshop
+NextPage: 06-uploading-notebooks
 ---
 
 When deploying the Jupyter Notebook workspace using the template, 512Mi of memory will be allocated to the container created.
@@ -45,8 +44,8 @@ To verify the change, run again the command:
 oc get deploymentconfig experiments -o template --template '{{(index .spec.template.spec.containers 0).resources.limits.memory}}{{"\n"}}'
 ```
 
-If you know in advance of creating a Jupyter Notebook workspace that you will need additional memory, you can set the memory by passing the `NOTEBOOK_MEMORY` template parameter to the `notebook-workspace` template.
- 
+If you know in advance of creating a Jupyter Notebook workspace that you will need additional memory, you can set the memory by passing the `NOTEBOOK_MEMORY` template parameter to the `notebook-workspace` template. A template parameter can also be used to set the size of the persistent storage allocated. The name of the template parameter for the size of the volume is `VOLUME_SIZE`.
+
 Note that if your project is subject to resource limit ranges and/or resource quotas, you will only be able to increase the amount of memory allocated up to maximum allowed under the limit range. Although the limit range may allow you set a value, you still also need to have an adequate memory allowance remaining, not in use, under any resource quota. If you have insufficient memory remaining under your resource quota, the deployment will not succeed.
 
 You can view what the resource limit ranges are, if set for a project, by running:
