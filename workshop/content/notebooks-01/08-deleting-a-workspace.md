@@ -1,7 +1,7 @@
 ---
 Title: Deleting a Workspace
 PrevPage: 07-mounting-via-webdav
-NextPage: ../notebooks-02/01-deploying-a-notebook
+NextPage: ../notebooks-02/01-distributing-notebooks
 ExitSign: Start Next Module
 ---
 
