@@ -2,7 +2,7 @@
 Sort: 3
 Title: Setup Environment
 PrevPage: index
-NextPage: notebooks-01/01-images-and-templates
+NextPage: notebooks-01/01-persistent-workspace
 ExitSign: Start Workshop
 ---
 

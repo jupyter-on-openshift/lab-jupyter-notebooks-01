@@ -1,7 +1,7 @@
 ---
 Title: Mounting via WebDAV
-PrevPage: 06-uploading-notebooks
-NextPage: 08-deleting-a-workspace
+PrevPage: 08-uploading-notebooks
+NextPage: 10-deleting-a-workspace
 ---
 
 Neither Kubernetes or OpenShift provide a method for mounting of a persistent volume used by an application in a cluster, to a separate host outside of the cluster.
@@ -17,13 +17,13 @@ To support access using the WevDAV protocol, when the `notebook-workspace` templ
 To see the hostname allocated to the URL for the WebDAV server, run:
 
 ```execute
-oc get route experiments-webdav
+oc get route workspace-webdav
 ```
 
 The URL for access to the WebDAV server for the instance of the Jupyter Notebook workspace you created is:
 
 ```copy
-https://experiments-webdav-%project_namespace%.%cluster_subdomain%/webdav/
+https://workspace-webdav-%project_namespace%.%cluster_subdomain%/webdav/
 ```
 
 When connecting to the WebDAV server, the login name will be `jupyter` and the password will be the same password you used to secure access to the Jupyter Notebook web space through the browser. You must use the `/webdav/` path in the URL or setup of the WebDAV connection.

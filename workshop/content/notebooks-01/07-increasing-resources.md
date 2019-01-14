@@ -1,7 +1,7 @@
 ---
 Title: Increasing Resources
-PrevPage: 04-jupyterlab-web-design
-NextPage: 06-uploading-notebooks
+PrevPage: 06-enabling-jupyterlab
+NextPage: 08-uploading-notebooks
 ---
 
 When deploying the Jupyter Notebook workspace using the template, 512Mi of memory will be allocated to the container created.
@@ -13,7 +13,7 @@ To determine the current amount of memory allocated, you have a couple of option
 The first is to run:
 
 ```execute
-oc describe deploymentconfig experiments
+oc describe deploymentconfig workspace
 ```
 
 Look through the output, and for the `notebook` container you should see an entry for the memory limit, similar to:
@@ -29,19 +29,19 @@ Containers:
 Alternatively, to display just the value of the limit, run:
 
 ```execute
-oc get deploymentconfig experiments -o template --template '{{(index .spec.template.spec.containers 0).resources.limits.memory}}{{"\n"}}'
+oc get deploymentconfig workspace -o template --template '{{(index .spec.template.spec.containers 0).resources.limits.memory}}{{"\n"}}'
 ```
 
 To increase the memory allocated, you can use the `oc set resources` command. To increase the memory limit to 768Mi, run:
 
 ```execute
-oc set resources deploymentconfig experiments --containers notebook --limits memory=768Mi
+oc set resources deploymentconfig workspace --containers notebook --limits memory=768Mi
 ```
 
 To verify the change, run again the command:
 
 ```execute
-oc get deploymentconfig experiments -o template --template '{{(index .spec.template.spec.containers 0).resources.limits.memory}}{{"\n"}}'
+oc get deploymentconfig workspace -o template --template '{{(index .spec.template.spec.containers 0).resources.limits.memory}}{{"\n"}}'
 ```
 
 If you know in advance of creating a Jupyter Notebook workspace that you will need additional memory, you can set the memory by passing the `NOTEBOOK_MEMORY` template parameter to the `notebook-workspace` template.
@@ -51,14 +51,14 @@ A template parameter can also be used to set the size of the persistent storage 
 To see how much capacity the persistent volume allocated does have, run:
 
 ```execute
-oc get pvc experiments-data
+oc get pvc workspace-data
 ```
 
 This will display output similar to:
 
 ```
-NAME              STATUS  VOLUME  CAPACITY  ACCESS MODES  STORAGECLASS  AGE
-experiments-data  Bound   vol121  10Gi      RWO                         15m
+NAME            STATUS  VOLUME  CAPACITY  ACCESS MODES  STORAGECLASS  AGE
+workspace-data  Bound   vol121  10Gi      RWO                         15m
 ```
 
 Note that if your project is subject to resource limit ranges and/or resource quotas, you will only be able to increase the amount of memory allocated up to maximum allowed under the limit range. Although the limit range may allow you set a value, you still also need to have an adequate memory allowance remaining, not in use, under any resource quota. If you have insufficient memory remaining under your resource quota, the deployment will not succeed.

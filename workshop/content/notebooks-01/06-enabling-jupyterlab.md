@@ -1,24 +1,24 @@
 ---
-Title: JupyterLab Web Design
-PrevPage: 03-accessing-a-workspace
-NextPage: 05-increasing-resources
+Title: Enabling JupyterLab
+PrevPage: 05-accessing-a-workspace
+NextPage: 07-increasing-resources
 ---
 
 The Jupyter Notebook web interface which is used is the so called "classic" design. If you wish to use the new JupyterLab web interface design, you can do so by setting an environment variable in the deployment configuration to enable it. To do this, run the command:
 
 ```execute
-oc set env deploymentconfig experiments JUPYTER_ENABLE_LAB=true
+oc set env deploymentconfig workspace JUPYTER_ENABLE_LAB=true
 ```
 
 This will trigger a re-deployment of the Jupyter Notebook instance. You can monitor progress of the new deployment by running:
 
 ```execute
-oc rollout status deploymentconfig experiments
+oc rollout status deploymentconfig workspace
 ```
 
 Once the new deployment has finished, close the existing window for the Jupyter Notebook workspace and open the URL for the instance again.
 
-https://experiments-%project_namespace%.%cluster_subdomain%/
+https://workspace-%project_namespace%.%cluster_subdomain%/
 
 Enter your password, and you should see the JupyterLab web interface design.
 

@@ -1,8 +1,7 @@
 ---
 Title: Distributing Notebooks
-PrevPage: ../notebooks-01/08-deleting-a-workspace
-NextPage: ../finish
-ExitSign: Finish Workshop
+PrevPage: ../notebooks-01/10-deleting-a-workspace
+NextPage: 02-images-and-templates
 ---
 
 In the first set of exercises you deployed a Jupyter Notebook workspace. This included a persistent volume so that any work done in the workspace was retained, even if the Jupyter notebook instance was restarted.
@@ -22,24 +21,3 @@ A second option which provides more of a guarantee that another person would hav
 Using a container image as the packaging format, anyone wanting to use the Jupyter notebook files need only then have access to a container runtime to run it. The container runtime could be locally hosted, or a cloud platform such as Kubernetes or OpenShift could be used.
 
 In this next set of exercises, you will learn how to deploy a container image which includes a set of existing Jupyter notebook files, and how to build your own container image that you could distribute.
-
-Before we get started, ensure that you have deleted the Jupyter Notebook workspace you already created, by running:
-
-```execute
-oc delete all,pvc --selector app=experiments
-```
-
-Next ensure that the image stream for the minimal Python Notebook is still loaded by running:
-
-```execute
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyter-notebooks/master/image-streams/s2i-minimal-notebook.json
-```
-
-Finally, ensure that the templates from the first set of exercises are also still loaded by running:
-
-```execute
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyter-notebooks/master/templates/notebook-deployer.json
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyter-notebooks/master/templates/notebook-builder.json
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyter-notebooks/master/templates/notebook-quickstart.json
-oc apply -f https://raw.githubusercontent.com/jupyter-on-openshift/jupyter-notebooks/master/templates/notebook-workspace.json
-```

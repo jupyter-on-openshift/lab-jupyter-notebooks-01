@@ -1,6 +1,6 @@
 ---
 Title: Deleting a Workspace
-PrevPage: 07-mounting-via-webdav
+PrevPage: 09-mounting-via-webdav
 NextPage: ../notebooks-02/01-distributing-notebooks
 ExitSign: Start Next Module
 ---
@@ -12,27 +12,27 @@ If you have finished with a particular Jupyter Notebook workspace, you can delet
 To see a list of all the resources created, run:
 
 ```execute
-oc get all,pvc --selector app=experiments -o name
+oc get all,pvc --selector app=workspace -o name
 ```
 
 This will display output similar to:
 
 ```
-pod/experiments-3-62692
-replicationcontroller/experiments-1
-replicationcontroller/experiments-2
-replicationcontroller/experiments-3
-service/experiments
-deploymentconfig.apps.openshift.io/experiments
-route.route.openshift.io/experiments
-route.route.openshift.io/experiments-webdav
-persistentvolumeclaim/experiments-data
+pod/workspace-3-62692
+replicationcontroller/workspace-1
+replicationcontroller/workspace-2
+replicationcontroller/workspace-3
+service/workspace
+deploymentconfig.apps.openshift.io/workspace
+route.route.openshift.io/workspace
+route.route.openshift.io/workspace-webdav
+persistentvolumeclaim/workspace-data
 ```
 
 To then delete the Jupyter Notebook workspace, run:
 
 ```execute
-oc delete all,pvc --selector app=experiments
+oc delete all,pvc --selector app=workspace
 ```
 
 Note that this command will delete the deployed application, as well as the persistent volume. If you wanted to retain the persistent volume in order to copy files out of it at a later time, do not include `pvc` in the list of resources to delete.
