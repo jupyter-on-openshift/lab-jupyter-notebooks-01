@@ -15,7 +15,7 @@ In order to distribute a set of Jupyter notebook files and everything they requi
 
 The first option is to host the Jupyter notebook files in a hosted Git repository where others can find them. Because this is only the Jupyter notebook files and is not a complete runtime environment, you would also need to add a `requirements.txt` file listing the set of Python packages required. This would allow another person to replicate the runtime environment by installing the listed packages.
 
-This option provides maximum portability, as the environment could potentially be replicated on different operating systems, different Python distributions, or different Python versions. This however is not guaranteed, as the operating system could be lacking a required system package, the Python runtime used may not be fully compatible, the author not have listed all the Python packages required, or they didn't pin versions for all Python packages and so there is no certainty as to what versions they were actually using.
+This option provides maximum portability, as the environment could potentially be replicated on different operating systems, different Python distributions, or different Python versions. This however is not guaranteed, as the operating system could be lacking a required system package, the Python runtime used may not be fully compatible, the author may not have listed all the Python packages required, or they didn't pin versions for all Python packages and so there is no certainty as to what versions they were actually using.
 
 A second option which provides more of a guarantee that another person would have the same runtime environment is to use a container image to package up the Jupyter notebook files, along with the Python and Jupyter Notebook runtime environment, and any Python or system packages required, all pre-installed.
 
@@ -23,7 +23,7 @@ Using a container image as the packaging format, anyone wanting to use the Jupyt
 
 In this next set of exercises, you will learn how to deploy a container image which includes a set of existing Jupyter notebook files, and how to build your own container image that you could distribute.
 
-Before we get started, ensure that you delete the Jupyter Notebook workspace you already created, by running:
+Before we get started, ensure that you have deleted the Jupyter Notebook workspace you already created, by running:
 
 ```execute
 oc delete all,pvc --selector app=experiments
