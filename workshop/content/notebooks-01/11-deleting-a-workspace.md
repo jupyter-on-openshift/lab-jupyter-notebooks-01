@@ -1,6 +1,6 @@
 ---
 Title: Deleting a Workspace
-PrevPage: 09-mounting-via-webdav
+PrevPage: 10-mounting-via-webdav
 NextPage: ../notebooks-02/01-distributing-notebooks
 ExitSign: Start Next Module
 ---

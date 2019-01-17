@@ -1,7 +1,7 @@
 ---
 Title: Uploading Notebooks
 PrevPage: 07-increasing-resources
-NextPage: 09-mounting-via-webdav
+NextPage: 09-hosted-git-repository
 ---
 
 The Jupyter Notebook workspace you created using the `notebook-workspace` template is empty. It has only the minimal set of Python packages installed which are necessary to run the Jupyter Notebook software, with no additional files such as notebooks or data files.
@@ -41,7 +41,7 @@ POD=`oc get pods --selector app=workspace -o jsonpath='{.items[?(@.status.phase=
 
 In your own OpenShift cluster when copying files, you can skip capturing the name of the pod like this, and instead type the name of the pod in manually when running the command below. An environment variable is used here just to help automate things for these workshop instructions.
 
-To copy all the files in a local directory directory called `notebooks` to the Jupyter Notebook workspace, run:
+To copy all the files in a local directory called `notebooks` to the Jupyter Notebook workspace, run:
 
 ```execute
 oc rsync notebooks/ $POD:/opt/app-root/src/

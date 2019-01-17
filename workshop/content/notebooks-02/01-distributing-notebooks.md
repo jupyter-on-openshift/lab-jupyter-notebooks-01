@@ -1,6 +1,6 @@
 ---
 Title: Distributing Notebooks
-PrevPage: ../notebooks-01/10-deleting-a-workspace
+PrevPage: ../notebooks-01/11-deleting-a-workspace
 NextPage: 02-images-and-templates
 ---
 
