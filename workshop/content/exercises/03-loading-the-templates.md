@@ -31,7 +31,7 @@ You can see the list of templates loaded by running:
 oc get templates
 ```
 
-In the initial exercise you will be using the `notebook-workspace` template.
+In this workshop you will be using the `notebook-workspace` template.
 
 To see details about this template and what parameters can be provided when using the template, run the command:
 

@@ -1,5 +1,5 @@
 var config = {
-    site_title: 'Jupyter on OpenShift',
+    site_title: 'Jupyter Notebooks 01',
 
     variables: [
       {

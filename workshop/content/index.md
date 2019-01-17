@@ -1,8 +1,8 @@
 ---
 Sort: 1
 Title: Workshop Overview
-NextPage: modules
-ExitSign: Modules Available
+NextPage: setup
+ExitSign: Setup Environment
 ---
 
 The [Project Jupyter](https://jupyter.org/) site describes Jupyter Notebooks as:
@@ -11,4 +11,4 @@ The [Project Jupyter](https://jupyter.org/) site describes Jupyter Notebooks as:
 
 ![Jupyter Notebooks](jupyterpreview.png)
 
-In this workshop you will learn how to deploy Jupyter Notebooks to OpenShift for individual use, or for multiple users.
+In this workshop you will learn how to create a personal Jupyter Notebook workspace on OpenShift.

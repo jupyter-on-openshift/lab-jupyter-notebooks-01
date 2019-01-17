@@ -1,8 +1,8 @@
 ---
 Title: Deleting a Workspace
 PrevPage: 10-mounting-via-webdav
-NextPage: ../notebooks-02/01-distributing-notebooks
-ExitSign: Start Next Module
+NextPage: ../finish
+ExitSign: Finish Workshop
 ---
 
 The Jupyter Notebook workspace deployed using the `notebook-workspace` template is intended to serve as a long lived place where you can work on Jupyter notebooks. The use of attached persistent storage ensures that you will not loose your work even if the Jupyter Notebook application is restarted.
