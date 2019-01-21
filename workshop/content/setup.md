@@ -47,8 +47,7 @@ If the output is `yes`, this time you are all ready to go.
 If you still get an error, try creating a new project to do the workshop in by running:
 
 ``` execute
-read -p "Project Name: " PROJECT_NAMESPACE && \
-  oc new-project $PROJECT_NAMESPACE
+read -p "Project Name: " PROJECT_NAMESPACE && oc new-project $PROJECT_NAMESPACE
 ```
 
 At the prompt for your project name, enter in your username.
