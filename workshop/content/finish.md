@@ -1,7 +1,7 @@
 ---
 Sort: 4
 Title: Workshop Summary
-Exit Sign: Restart
+Exit Sign: Finish Workshop
 ---
 
 You have completed the workshop. Resources referred to, or used in the workshop which you may like to record for future reference are listed below.
