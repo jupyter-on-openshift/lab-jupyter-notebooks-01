@@ -3,7 +3,7 @@ LAB - Jupyter Notebooks 01
 
 This repository contains the first instalment in a series of workshops for learning how to deploy Jupyter Notebooks, and related applications in the Jupyter ecosystem, to OpenShift.
 
-To deploy this workshop standalone in an existing OpenShift project, run:
+To run through the workshop, create a new OpenShift project, and then in that project run:
 
 ```
 oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/master/templates/production.json \
@@ -31,4 +31,4 @@ To delete the workshop when done, run:
 oc delete all,serviceaccount,rolebinding,configmap -l app=lab-jupyter-notebooks-01
 ```
 
-This assumes you completed the workshop and followed any steps it describes to remove deployments created by following the steps described in the workshop.
+This assumes you completed the workshop and followed any steps it describes to remove deployments created by following the steps described in the workshop. If as recommended you had created a new project in which to run the workshop, you could also delete the project to delete the workshop and anything created when running it.
