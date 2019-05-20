@@ -11,7 +11,7 @@ oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/m
   --param APPLICATION_NAME=lab-jupyter-notebooks-01
 ```
 
-This will deploy an instance of the user environment as a standalone deployment. The name of the deployment will by default be `lab-jupyter-notebooks-01`.
+This will deploy an instance of the workshop environment as a standalone deployment. The name of the deployment will by default be `lab-jupyter-notebooks-01`.
 
 To determine the hostname assigned to the route which you need to use in the URL to access the workshop, run:
 
