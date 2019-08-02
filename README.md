@@ -7,7 +7,7 @@ To run through the workshop, create a new OpenShift project, and then in that pr
 
 ```
 oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/master/templates/production.json \
-  --param TERMINAL_IMAGE="quay.io/jupyteronopenshift/lab-jupyter-notebooks-01:1.1" \
+  --param TERMINAL_IMAGE="quay.io/jupyteronopenshift/lab-jupyter-notebooks-01:1.2" \
   --param APPLICATION_NAME=lab-jupyter-notebooks-01
 ```
 
