@@ -1,9 +1,3 @@
----
-Title: Increasing Resources
-PrevPage: 06-enabling-jupyterlab
-NextPage: 08-uploading-notebooks
----
-
 When deploying the Jupyter Notebook workspace using the template, 512Mi of memory will be allocated to the container created.
 
 If you are working with large data sets, or wish to be able to open many Jupyter notebook files at the same time, you may need to increase the amount of memory allocated.

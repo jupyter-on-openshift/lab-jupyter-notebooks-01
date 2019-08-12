@@ -1,9 +1,3 @@
----
-Title: Creating a Workspace
-PrevPage: 03-loading-the-templates
-NextPage: 05-accessing-a-workspace
----
-
 Now that you have the images and templates for deploying a Jupyter Notebook loaded, you can create the Jupyter Notebook workspace by running the command:
 
 ```execute

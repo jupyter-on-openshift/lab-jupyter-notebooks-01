@@ -1,9 +1,3 @@
----
-Title: Accessing a Workspace
-PrevPage: 04-creating-a-workspace
-NextPage: 06-enabling-jupyterlab
----
-
 Once the deployment has completed, you can see details of the public route created, including what public hostname the Jupyter Notebook instance was given, by running:
 
 ```execute

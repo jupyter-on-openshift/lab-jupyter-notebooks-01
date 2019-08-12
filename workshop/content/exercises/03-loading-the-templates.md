@@ -1,9 +1,3 @@
----
-Title: Loading the Templates
-PrevPage: 02-loading-the-images
-NextPage: 04-creating-a-workspace
----
-
 The minimal Jupyter Notebook image you loaded can be deployed as is, but to make it easier to secure access properly, add persistent storage, and define resources, as well as use it as a Source-to-Image (S2I) builder to create custom Jupyter Notebook images, a set of templates also exist.
 
 To load the templates, run the commands:

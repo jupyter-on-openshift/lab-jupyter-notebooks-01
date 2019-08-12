@@ -1,9 +1,3 @@
----
-Title: Mounting via WebDAV
-PrevPage: 09-hosted-git-repository
-NextPage: 11-deleting-a-workspace
----
-
 Neither Kubernetes or OpenShift provide a method for mounting of a persistent volume used by an application in a cluster, to a separate host outside of the cluster.
 
 One way around this, is to host within OpenShift a WebDAV server, which exports access to the persistent volume, over the HTTP protocol.

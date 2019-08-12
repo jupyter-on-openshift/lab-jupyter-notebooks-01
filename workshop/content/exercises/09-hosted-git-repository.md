@@ -1,9 +1,3 @@
----
-Title: Hosted Git Repository
-PrevPage: 08-uploading-notebooks
-NextPage: 10-mounting-via-webdav
----
-
 Using the Jupyter Notebook web interface isn't particularly convenient when you need to upload many notebooks files as they will need to be uploaded one at a time. An alternative if using the web interface is to package them up into a single archive file and extract them once uploaded, from a terminal created from the Jupyter Notebook web interface.
 
 The `oc rsync` command provides an easier way to copy up a directory of files in one operation, but either way, you need to have the files on your local computer first. Often, sets of Jupyter notebooks are distributed by publishing them on a hosted Git repository. In this case, the Git repository can be checked out directly into the Jupyter Notebook workspace.

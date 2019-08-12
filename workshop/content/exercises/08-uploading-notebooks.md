@@ -1,9 +1,3 @@
----
-Title: Uploading Notebooks
-PrevPage: 07-increasing-resources
-NextPage: 09-hosted-git-repository
----
-
 The Jupyter Notebook workspace you created using the `notebook-workspace` template is empty. It has only the minimal set of Python packages installed which are necessary to run the Jupyter Notebook software, with no additional files such as notebooks or data files.
 
 To work with a Jupyter notebook file, you can either create them from scratch or upload them to the workspace.

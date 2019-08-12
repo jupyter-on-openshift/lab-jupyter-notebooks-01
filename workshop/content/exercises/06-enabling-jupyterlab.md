@@ -1,9 +1,3 @@
----
-Title: Enabling JupyterLab
-PrevPage: 05-accessing-a-workspace
-NextPage: 07-increasing-resources
----
-
 The Jupyter Notebook web interface which is used is the so called "classic" design. If you wish to use the new JupyterLab web interface design, you can do so by setting an environment variable in the deployment configuration to enable it. To do this, run the command:
 
 ```execute

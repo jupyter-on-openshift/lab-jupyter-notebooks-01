@@ -1,0 +1,32 @@
+modules:
+    index:
+        name: Workshop Overview
+        exit_sign: Setup Environment
+    setup:
+        name: Setup Environment
+        exit_sign: Start Workshop
+    exercises/01-persistent-workspace.md:
+        name: Persistent Workspace
+    exercises/02-loading-the-images:
+        name: Loading the Images
+    exercises/03-loading-the-templates:
+        name: Loading the Templates
+    exercises/04-creating-a-workspace:
+        name: Creating a Workspace
+    exercises/05-accessing-a-workspace:
+        name: Accessing a Workspace
+    exercises/06-enabling-jupyterlab:
+        name: Enabling JupyterLab
+    exercises/07-increasing-resources:
+        name: Increasing Resources
+    exercises/08-uploading-notebooks:
+        name: Uploading Notebooks
+    exercises/09-hosted-git-repository:
+        name: Hosted Git Repository
+    exercises/10-mounting-via-webdav:
+        name: Mounting via WebDAV
+    exercises/11-deleting-a-workspace:
+        name: Deleting a Workspace
+    finish:
+        name: Workshop Summary
+        exit_sign: Finish Workshop

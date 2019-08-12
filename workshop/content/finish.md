@@ -1,9 +1,3 @@
----
-Sort: 4
-Title: Workshop Summary
-Exit Sign: Finish Workshop
----
-
 You have completed the workshop. Resources referred to, or used in the workshop which you may like to record for future reference are listed below.
 
 The Jupyter on OpenShift project Git repositories can be found on GitHub at:
